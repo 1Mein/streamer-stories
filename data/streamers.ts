@@ -1,4 +1,5 @@
 import type { Streamer } from '~/types/domain'
+import { fiveopka } from './fiveopka'
 
 export const streamers: Streamer[] = [{
   slug: 'serega-pirat',
@@ -202,6 +203,6 @@ export const streamers: Streamer[] = [{
     ]
   },
   updatedAt: '17.10.2026'
-}]
+}, fiveopka]
 
 export function getStreamer(slug: string) { return streamers.find((streamer) => streamer.slug === slug) }

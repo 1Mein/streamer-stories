@@ -1,4 +1,5 @@
 <script setup lang="ts">
+withDefaults(defineProps<{ hasMedia?: boolean }>(), { hasMedia: true })
 const route = useRoute()
 const isProfile = computed(() => route.path.startsWith('/streamers/'))
 </script>
@@ -11,7 +12,7 @@ const isProfile = computed(() => route.path.startsWith('/streamers/'))
         <NuxtLink to="/" class="transition hover:text-[var(--accent)]">Каталог</NuxtLink>
         <a href="#biography" class="transition hover:text-[var(--accent)]">Биография</a>
         <a href="#timeline" class="transition hover:text-[var(--accent)]">Хронология</a>
-        <a href="#media" class="transition hover:text-[var(--accent)]">Медиа</a>
+        <a v-if="hasMedia" href="#media" class="transition hover:text-[var(--accent)]">Медиа</a>
       </template>
       <template v-else>
         <NuxtLink to="/#catalog" class="transition hover:text-[var(--accent)]">Каталог</NuxtLink>
