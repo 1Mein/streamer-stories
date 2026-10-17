@@ -145,7 +145,7 @@ onMounted(async () => {
     const gltf = await new GLTFLoader().loadAsync(props.modelPath)
     if (disposed) { disposeModel(gltf.scene); return }
     gltf.scene.position.set(0, -1.05, 0)
-    gltf.scene.scale.setScalar(2.2)
+    gltf.scene.scale.setScalar(3.5)
     modelRoot.add(gltf.scene)
     modelReady = true
     loading.value = false
