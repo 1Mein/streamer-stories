@@ -1,8 +1,17 @@
+# Dependencies and Nuxt build output
 node_modules/
 .nuxt/
 .output/
 .nitro/
 dist/
+.data/
+.cache/
+.vite/
+
+# Test reports
+coverage/
+
+# Logs
 
 *.log
 npm-debug.log*
@@ -10,15 +19,25 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Local environment (keep example templates)
 .env
 .env.*
 !.env.example
+!.env.*.example
 
+# OS and editor files
 .DS_Store
 Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+.idea/
+.codex/
+AGENTS.md
 
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
 
+# TypeScript incremental build cache
 *.tsbuildinfo
