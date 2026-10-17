@@ -44,4 +44,4 @@ systemctl restart streamer-stories
 - `DEPLOY_SSH_KEY` — приватный SSH-ключ deploy-пользователя;
 - `DEPLOY_PORT` — SSH-порт, если используется не `22`.
 
-На сервере заранее должны быть установлены Node.js/npm и Git, каталог `/var/www/streamer-stories` должен быть клоном этого репозитория, а deploy-пользователь должен иметь доступ к каталогу и право выполнить `systemctl restart streamer-stories`. Приватный ключ не следует добавлять в репозиторий.
+На сервере заранее должны быть установлены Node.js/npm и Git, каталог `/var/www/streamer-stories` должен быть клоном этого репозитория, а deploy-пользователь должен иметь доступ к каталогу и право выполнить `systemctl restart streamer-stories`. Workflow автоматически пытается загрузить NVM из `$HOME/.nvm`; если Node.js установлен другим способом, `node` и `npm` должны быть доступны в non-interactive SSH-сессии. Приватный ключ не следует добавлять в репозиторий.
