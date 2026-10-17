@@ -16,6 +16,7 @@ export type Collaboration = { name: string; role: string; detail: string }
 export type SetupItem = { label: string; value: string }
 export type Streamer = {
   slug: string; name: string; alias: string; eyebrow: string; bio: string
+  portrait?: { src: string; alt: string; sourceUrl: string; credit: string; width: number; height: number }
   theme: Theme; accounts: PlatformAccount[]; events: HistoricalEvent[]; sources: Source[]
   genres: string[]; updatedAt: string; media: MediaItem[]
   biography: { confirmed: string[]; unknown: string[]; details?: BiographyItem[]; music?: MusicItem[]; collaborations?: Collaboration[]; setup?: SetupItem[]; contacts?: BiographyItem[]; interests?: string[] }
