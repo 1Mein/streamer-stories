@@ -9,7 +9,7 @@ export type HistoricalEvent = {
   category: EventCategory; verified: boolean; sources: string[]
 }
 export type PlatformAccount = { platform: string; handle: string; url: string; verified: boolean }
-export type MediaItem = { id: string; title: string; imageUrl: string; url: string; sourceId: string; kind: 'avatar' | 'video' }
+export type MediaItem = { id: string; title: string; imageUrl: string; url: string; sourceId: string; kind: 'avatar' | 'video' | 'photo' }
 export type BiographyItem = { label: string; value: string }
 export type MusicItem = { date: string; title: string; detail: string }
 export type Collaboration = { name: string; role: string; detail: string }

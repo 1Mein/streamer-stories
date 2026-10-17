@@ -134,6 +134,7 @@ export const streamers: Streamer[] = [{
   ],
   sources: [
     { id: 'twitch', title: 'Twitch · derzko69', url: 'https://www.twitch.tv/derzko69', platform: 'Twitch', checkedAt: '2026-10-17', status: 'verified' },
+    { id: 'portrait-clip', title: 'Twitch · кадр трансляции derzko69', url: 'https://www.twitch.tv/derzko69/clip/BoredInnocentHerbsDatBoi-XUz60XjbGcQzUv7u', platform: 'Twitch', checkedAt: '2026-10-17', status: 'verified' },
     { id: 'youtube', title: 'YouTube · @derzko69', url: 'https://www.youtube.com/@derzko69', platform: 'YouTube', checkedAt: '2026-10-17', status: 'verified' },
     { id: 'telegram', title: 'Telegram · @gigaderzko69', url: 'https://telegram.me/gigaderzko69', platform: 'Telegram', checkedAt: '2026-10-17', status: 'verified' },
     { id: 'discord', title: 'Discord · derzko69', url: 'https://discord.gg/derzko69', platform: 'Discord', checkedAt: '2026-10-17', status: 'verified' },
@@ -142,10 +143,7 @@ export const streamers: Streamer[] = [{
   ],
   genres: ['игровые стримы', 'музыка', 'косплей', 'аниме и кино', 'общение'],
   media: [
-    { id: 'derzko-avatar', title: 'Публичный образ derzko69', imageUrl: 'https://derzko69.ru/images/homeview/avatar-2.webp', url: 'https://www.twitch.tv/derzko69', sourceId: 'twitch', kind: 'avatar' },
-    { id: 'derzko-hero', title: 'Визуальный архив профиля', imageUrl: 'https://derzko69.ru/images/homeview/derzko-hero-wide.webp', url: 'https://www.youtube.com/@derzko69', sourceId: 'youtube', kind: 'video' },
-    { id: 'derzko-cosplay', title: 'Косплей-архив', imageUrl: 'https://derzko69.ru/images/homeview/фон.webp', url: 'https://www.twitch.tv/derzko69', sourceId: 'twitch', kind: 'video' },
-    { id: 'derzko-bg', title: 'Атмосфера архива', imageUrl: 'https://derzko69.ru/images/homeview/фон.webp', url: 'https://www.youtube.com/@derzko69', sourceId: 'youtube', kind: 'video' }
+    { id: 'derzko-stream', title: 'Кадр трансляции derzko69', imageUrl: '/images/streamers/derzko-stream.webp', url: 'https://www.twitch.tv/derzko69/clip/BoredInnocentHerbsDatBoi-XUz60XjbGcQzUv7u', sourceId: 'portrait-clip', kind: 'photo' }
   ],
   biography: {
     unknown: [],

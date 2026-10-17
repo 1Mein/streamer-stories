@@ -4,7 +4,7 @@ const isProfile = computed(() => route.path.startsWith('/streamers/'))
 </script>
 
 <template>
-  <header class="mx-auto flex max-w-7xl flex-wrap gap-5 items-center justify-between px-5 py-6 lg:px-8">
+  <header class="relative z-10 mx-auto flex max-w-7xl flex-wrap gap-5 items-center justify-between px-5 py-6 lg:px-8">
     <NuxtLink to="/" class="display text-sm tracking-tight">STREAMER<span class="text-[var(--accent)]">/</span>STORIES</NuxtLink>
     <nav aria-label="Основная навигация" class="flex flex-wrap gap-4 text-xs text-[var(--muted)]">
       <template v-if="isProfile">
