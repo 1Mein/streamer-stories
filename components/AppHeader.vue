@@ -4,21 +4,21 @@ const isProfile = computed(() => route.path.startsWith('/streamers/'))
 </script>
 
 <template>
-  <header class="mx-auto flex max-w-7xl items-center justify-between px-5 py-6 lg:px-8">
-    <NuxtLink to="/" class="display text-sm tracking-tight">STREAMER<span class="text-[#d7ff42]">/</span>STORIES</NuxtLink>
-    <nav class="hidden gap-7 text-xs text-[#a8a89e] md:flex">
+  <header class="mx-auto flex max-w-7xl flex-wrap gap-5 items-center justify-between px-5 py-6 lg:px-8">
+    <NuxtLink to="/" class="display text-sm tracking-tight">STREAMER<span class="text-[var(--accent)]">/</span>STORIES</NuxtLink>
+    <nav aria-label="Основная навигация" class="flex flex-wrap gap-4 text-xs text-[var(--muted)]">
       <template v-if="isProfile">
-        <NuxtLink to="/" class="transition hover:text-[#d7ff42]">Каталог</NuxtLink>
-        <a href="#timeline" class="transition hover:text-[#d7ff42]">Timeline</a>
-        <a href="#biography" class="transition hover:text-[#d7ff42]">Биография</a>
-        <a href="#media" class="transition hover:text-[#d7ff42]">Медиа</a>
+        <NuxtLink to="/" class="transition hover:text-[var(--accent)]">Каталог</NuxtLink>
+        <a href="#biography" class="transition hover:text-[var(--accent)]">Биография</a>
+        <a href="#timeline" class="transition hover:text-[var(--accent)]">Хронология</a>
+        <a href="#media" class="transition hover:text-[var(--accent)]">Медиа</a>
       </template>
       <template v-else>
-        <a href="#catalog" class="transition hover:text-[#d7ff42]">Каталог</a>
-        <a href="#vote" class="transition hover:text-[#d7ff42]">Голосование</a>
-        <NuxtLink to="/admin" class="transition hover:text-[#d7ff42]">Модерация</NuxtLink>
+        <NuxtLink to="/#catalog" class="transition hover:text-[var(--accent)]">Каталог</NuxtLink>
+        <NuxtLink to="/#vote" class="transition hover:text-[var(--accent)]">Голосование</NuxtLink>
+        <NuxtLink to="/admin" class="transition hover:text-[var(--accent)]">Обзор архива</NuxtLink>
       </template>
     </nav>
-    <span class="mono text-[10px] uppercase tracking-[.2em] text-[#5d5d56]">{{ isProfile ? 'досье / 001' : 'архив 001' }}</span>
+    <span class="mono text-[10px] uppercase tracking-[.2em] text-[var(--muted)]">{{ isProfile ? 'профиль' : 'публичный архив' }}</span>
   </header>
 </template>

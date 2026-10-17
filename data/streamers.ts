@@ -2,6 +2,14 @@ import type { Streamer } from '~/types/domain'
 
 export const streamers: Streamer[] = [{
   slug: 'serega-pirat',
+  portrait: {
+    src: '/images/streamers/serega-pirat.webp',
+    alt: 'Серёга Пират в коричневой футболке со сложенными перед собой руками',
+    sourceUrl: 'https://i-m-i.ru/profiles/seryoga-pirat',
+    credit: 'Фото из профиля ИМИ',
+    width: 900,
+    height: 900
+  },
   name: 'Серёга Пират',
   alias: 'Serega Pirat',
   eyebrow: 'стример · автор · игровой архив',
@@ -21,7 +29,7 @@ export const streamers: Streamer[] = [{
   ],
   events: [
     { id: 'origin', date: '1996–2014', year: '01', title: 'Ранние годы и образование', description: 'По данным предоставленных публикаций, Сергей Евгеньевич Маляр родился 30 декабря 1996 года в Санкт-Петербурге, учился в Дальнереченске и жил во Владивостоке. Позже он окончил вуз по специальности «управление морским транспортом», но выбрал блогинг и музыку.', category: 'origin', verified: false, sources: ['24smi', '360'] },
-    { id: 'youtube-start', date: 'С 2014 года', year: '02', title: 'Мувики и Dota 2', description: 'Сергей начал с игровых нарезок по Dota 2 на YouTube. В 2016–2017 годах, согласно справке, сотрудничал с Team Empire.', category: 'content', verified: false, sources: ['cyber-sports', 'peoples'] },
+    { id: 'youtube-start', date: 'С 2014 года', year: '02', title: 'Мувики и Dota 2', description: 'Сергей начал с игровых нарезок по Dota 2 на YouTube. В 2016–2017 годах, согласно справке, сотрудничал с Team Empire.', category: 'content', verified: false, sources: ['cyber-sports'] },
     { id: 'video-era', date: '2016–2020', year: '03', title: 'Разборы, пародии и вирусные видео', description: 'Известность принесли ироничные разборы решафлов NAVI, пародии на Папича и ролики «Гарри Поттер и школа Доты» и «Тилт».', category: 'milestone', verified: false, sources: ['24smi', '360'] },
     { id: 'streaming', date: '2020–2024', year: '04', title: 'Стриминг и смена площадок', description: 'После банов на Twitch трансляции постепенно переместились на YouTube, Trovo и Kick. В феврале 2024 года, по данным публикаций, канал Twitch получил длительную блокировку за ненормативную лексику.', category: 'platform', verified: false, sources: ['cybersport', '360'] },
     { id: 'music', date: '2021–2026', year: '05', title: 'Музыка и медийные турниры', description: 'Серёга Пират развил направление ироничного Dota-рэпа, выпустил альбом «Вот мой альбом, сори», записал трек с Team Spirit и участвовал в медийных турнирах BetBoom Streamers Battle.', category: 'content', verified: false, sources: ['spotify', 'cybersport'] },
@@ -92,6 +100,14 @@ export const streamers: Streamer[] = [{
   updatedAt: '17.10.2026'
 }, {
   slug: 'derzko',
+  portrait: {
+    src: '/images/streamers/derzko.webp',
+    alt: 'Derzko в чёрной футболке и наушниках во время трансляции',
+    sourceUrl: 'https://www.twitch.tv/derzko69/clip/BoredInnocentHerbsDatBoi-XUz60XjbGcQzUv7u',
+    credit: 'Кадр трансляции derzko69 / Twitch',
+    width: 900,
+    height: 740
+  },
   name: 'Дерзко',
   alias: 'derzko69 · Данила Киселёв',
   eyebrow: 'стример · музыкант · контент-мейкер',
@@ -132,6 +148,7 @@ export const streamers: Streamer[] = [{
     { id: 'derzko-bg', title: 'Атмосфера архива', imageUrl: 'https://derzko69.ru/images/homeview/фон.webp', url: 'https://www.youtube.com/@derzko69', sourceId: 'youtube', kind: 'video' }
   ],
   biography: {
+    unknown: [],
     confirmed: [
       'Данила Алексеевич Киселёв, известный под псевдонимом derzko69 (Дерзко 69), — стример, музыкант и контент-мейкер из Мытищ Московской области. Его деятельность объединяет игровые трансляции, общение с аудиторией, музыку, косплей, совместные шоу и IRL-мероприятия.',
       'По присланной биографической справке, Данила родился 30 июня 2002 года и вырос в Мытищах. Он получил 9 классов образования и среднее профессиональное образование с красным дипломом по специальности «Компьютерные системы и комплексы». В публичном описании также упоминаются спортзал, силовые челленджи и тренировки во время стримов.',
