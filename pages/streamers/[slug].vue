@@ -13,7 +13,7 @@ useSeoMeta({ title: () => `${streamer.value?.name} — Streamer Stories`, descri
 </script>
 <template>
   <div v-if="streamer" class="profile-page min-h-screen" :style="{ '--accent': streamer.theme.colors.accent, '--muted': streamer.theme.colors.muted, '--surface': streamer.theme.colors.surface, '--background': streamer.theme.colors.background, background: `radial-gradient(circle at 85% 8%, ${streamer.theme.colors.surface} 0, transparent 28rem), radial-gradient(circle at 8% 45%, ${streamer.theme.colors.surface} 0, transparent 24rem), ${streamer.theme.colors.background}`, color: streamer.theme.colors.text }">
-    <AppHeader />
+    <AppHeader :has-media="streamer.media.length > 0" />
     <main class="mx-auto max-w-7xl px-5 pb-24 lg:px-8">
       <section class="profile-hero">
         <div class="profile-intro rise">
@@ -83,7 +83,7 @@ useSeoMeta({ title: () => `${streamer.value?.name} — Streamer Stories`, descri
           </div>
         </aside>
       </section>
-      <section id="media" class="border-t border-[#3b3b35] py-20">
+      <section v-if="streamer.media.length" id="media" class="border-t border-[#3b3b35] py-20">
         <p class="mono mb-3 text-[10px] uppercase tracking-[.2em]" :style="{ color: streamer.theme.colors.accent }">медиаархив</p>
         <h2 class="display mb-8 text-3xl">Кадры из публичного архива</h2>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" :class="{ 'media-single': streamer.media.length === 1 }">
@@ -176,10 +176,10 @@ useSeoMeta({ title: () => `${streamer.value?.name} — Streamer Stories`, descri
         </div>
       </div>
     </ClientOnly>
-    <ClientOnly v-if="streamer.slug === 'derzko'">
+    <ClientOnly v-if="streamer.slug === 'derzko' || streamer.slug === '5opka'">
       <div class="pointer-events-none fixed bottom-3 right-3 z-30 sm:bottom-5 sm:right-5">
         <div class="pointer-events-auto">
-          <CharacterViewer model-path="/models/derzko.glb" />
+          <CharacterViewer :model-path="`/models/${streamer.slug}.glb`" />
         </div>
       </div>
     </ClientOnly>
